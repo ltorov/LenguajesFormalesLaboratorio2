@@ -1,1 +1,7 @@
 # cm0081-20211-lab2
+
+Gregorio Pérez Bernal & Luisa Toro Villegas
+
+MacOS Version 11.3
+
+Visual Studio Code, stack Version 2.5.1
