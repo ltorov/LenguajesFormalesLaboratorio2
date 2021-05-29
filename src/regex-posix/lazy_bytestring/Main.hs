@@ -1,8 +1,6 @@
-import Criterion.Measurement
-import Text.Regex.Posix
-import System.IO
---Reads the input into a FA and takes the name of the file to be read as what the user inputs
+module Main where
+
+import Text.Regex.Posix.ByteString.Lazy
+
 main :: IO ()
-main = do 
-    s <- readFile "tx1.txt"
-    print s
+main = putStrLn "Hello, Haskell!"
