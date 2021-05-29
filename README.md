@@ -2,7 +2,7 @@
 
 Gregorio Pérez Bernal & Luisa Toro Villegas
 
-MacOS Version 11.3
+MacOS Version 11.2
 
 Visual Studio Code, stack Version 2.5.1
 
