@@ -10,8 +10,6 @@ import Data.Typeable
 import System.Environment (getArgs)
 import Data.Time
 
-
-
 isRegEx:: String -> String -> Bool
 isRegEx x y = y =~ x :: Bool
 
