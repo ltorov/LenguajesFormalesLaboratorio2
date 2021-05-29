@@ -5,7 +5,7 @@ import Text.Regex.Posix
 import System.Environment (getArgs)
 import Data.Time
 --This function recieves two parameters of type string and returns a boolean.
---It determines whether the regular expression matches the string contained in the text file.
+--It determines whether the regular expression matches the string contained in the text file using the regex posix library.
 isRegEx:: String -> String -> Bool
 isRegEx x y = y =~ x :: Bool
 
