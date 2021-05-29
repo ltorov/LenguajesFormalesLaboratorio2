@@ -7,7 +7,7 @@ import System.Environment (getArgs)
 import Data.Time
 
 --This function recieves two parameters of type lazy bytestring and returns a boolean.
---It determines whether the regular expression matches the lazy bytestring contained in the text file.
+--It determines whether the regular expression matches the lazy bytestring contained in the text file using the regex posix library.
 isRegEx:: L.ByteString ->  L.ByteString -> Bool
 isRegEx x y =  y =~ x :: Bool
 
