@@ -1,0 +1,17 @@
+cabal-version:      2.4
+name:               posix-string
+version:            0.1.0.0
+license:            NONE
+author:             Gregorio Perez, Luisa Toro
+maintainer:         gperezb1@eafit.edu.co
+
+library
+  build-depends: base ^>=4.14.1.0
+                 , regex-posix
+                 , time
+executable posix-string
+    main-is:          Main.hs
+    build-depends:    base ^>=4.14.1.0,
+                      regex-posix,
+                      time
+    default-language: Haskell2010

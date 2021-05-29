@@ -1,23 +1,15 @@
+module Main where
 --https://chrisdone.com/posts/measuring-duration-in-haskell/
 
+import Text.Regex.Posix.String
 import Text.Regex.Posix
 import System.IO
 import Text.Read (readMaybe)
 import Data.List ( nub )
-import Data.Set ( Set )
-import Data.String
-import Data.Typeable 
-import System.CPUTime
-import Text.Printf
-import Control.Monad.IO.Class (MonadIO(liftIO))
-import Control.Exception
-import Formatting
-import Formatting.Clock
-import System.Clock
+import Data.Typeable  
+import System.Environment (getArgs)
+import Data.Time
 
-
-data PosixString = PosixString String String 
-    deriving (Eq, Ord)
 
 
 isRegEx:: String -> String -> Bool
@@ -25,14 +17,12 @@ isRegEx x y = y =~ x :: Bool
 
 main :: IO ()
 main = do 
-    file <- getLine
-    start <- getTime Monotonic
-    let arr = words file
-    input <- readFile (head(arr))
-    let source = last(arr)
-    let b = input =~ source :: Bool 
-    end <- getTime Monotonic
-    print b
+    start <- getCurrentTime
+    file <- getArgs
+    input <- readFile (head(file))
+    let source = last(file)
+    let match = isRegEx source input 
+    print match
+    stop <- getCurrentTime
     putStrLn " "
-    fprint (timeSpecs ) start end
-
+    print $ diffUTCTime stop start
