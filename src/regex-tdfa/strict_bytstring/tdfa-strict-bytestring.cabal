@@ -6,11 +6,15 @@ author:             Gregorio Perez, Luisa Toro
 maintainer:         gperezb1@eafit.edu.co
 
 library
-  build-dependens: base ^>=4.14.1.0
+  build-depends: base ^>=4.14.1.0
                  , regex-tdfa
+                 , time
+                 , bytestring
 
 executable tdfa-strict-bytestring
     main-is:          Main.hs
     build-depends:    base ^>=4.14.1.0,
-                      regex-tdfa
+                      regex-tdfa,
+                      time,
+                      bytestring
     default-language: Haskell2010
