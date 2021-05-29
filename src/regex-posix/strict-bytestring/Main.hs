@@ -7,7 +7,7 @@ import System.Environment (getArgs)
 import Data.Time
 
 --This function recieves two parameters of type strict Bytestring and returns a boolean.
---It determines whether the regular expression matches the strict Bytestring contained in the text file.
+--It determines whether the regular expression matches the strict Bytestring contained in the text file using the regex posix library.
 isRegEx:: S.ByteString ->  S.ByteString -> Bool
 isRegEx x y =  y =~ x :: Bool
 
