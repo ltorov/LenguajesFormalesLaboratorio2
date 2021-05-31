@@ -8,8 +8,8 @@ import Data.Time
 
 --This function recieves two parameters of type string and returns a boolean.
 --It determines whether the regular expression matches the string contained in the text file using the regex tdfa library.
-isRegEx:: String -> String -> Bool
-isRegEx x y = y =~ x :: Bool
+matchRegEx:: String -> String -> Bool
+matchRegEx x y = y =~ x :: Bool
 
 --Auxiliary function which recieves a boolean and writes it as a string
 boolToString :: Bool -> String
@@ -27,7 +27,7 @@ main = do
     file  <- getArgs
     input <- readFile (head(file))
     let source = last(file)
-    let match  = isRegEx source input 
+    let match  = matchRegEx source input 
     print (printaux match)
     stop <- getCurrentTime
     print "Time: "
