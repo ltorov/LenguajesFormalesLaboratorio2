@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{Report}
+\begin{document}
+
+Names: Gregorio Pérez Bernal & Luisa Toro Villegas\\
+
+
+Computer:
+
+\begin{itemize}
+Processor: 1,6 GHz Intel Core i5, two nuclei\\
+RAM: 4 GB 1600 MHz DDR3\\
+\end{itemize}
+
+Operation System: macOS Big Sur version 11.2
+
+GHC Version: 8.10.4
+
+regex-posix version: 0.96.9.0
+
+regex-tdfa version: 1.3.1.0
+
+\begin{center}
+ \begin{tabular}{||c c c c c||} 
+ \hline
+ Library & Data Type & 250 MB  & 1 GB & 5 GB \\ [0.5ex] 
+ \hline\hline
+ regex-posix & String & 247.662s & 2290.273s & NA\\ 
+ \hline
+ regex-posix & ByteString (Strict) & 247.6623s & 2290.273s & NA \\
+ \hline
+ regex-posix & ByteString (Lazy) & 11.594s & 57.524s & 454.4799s \\
+ \hline
+ regex-tdfa & String & 4.114s & 15.0535s & 80.25s \\
+ \hline
+ regex-tdfa & ByteString (Strict) & 250.411s & 2479.914s & NA\\  
+ \hline
+  regex-tdfa & ByteString (Lazy) & 8.0139s & 32.3377 & 651.463s\\ [0.5ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+Note: The slots marked as NA were attempted to test, but theoretically they can take over one day to compute, so no results were taken
+
+\end{document}
